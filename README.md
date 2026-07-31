@@ -1,4 +1,4 @@
-# Starter Repository for Software Development Exercise
+# Software Development Exercise
 
 Student instructions (feel free to remove this section later, as desired):
 
@@ -24,13 +24,13 @@ cd ~/Desktop/software-dev-exercise
 Create a virtual environment:
 
 ```sh
-conda create -n my-first-env-fall-2025 python=3.11
+conda create -n dev-env python=3.11
 ```
 
 Activate the virtual environment:
 
 ```sh
-conda activate my-first-env-fall-2025
+conda activate dev-env
 ```
 
 Install package dependencies:
@@ -48,7 +48,7 @@ Create a local ".env" file and store your environment variable in there:
 ```sh
 # this is the ".env" file...
 
-ALPHAVANTAGE_API_KEY="______________"
+ALPHAVANTAGE_API_KEY="______________________"
 
 # also tell flask where our web app is defined:
 FLASK_APP=web_app
@@ -65,8 +65,10 @@ python -m app.rps
 Run stocks dashboard:
 
 ```sh
-python -m app.stocks
+# option A: pass in the env var at runtime from the command line: 
+ALPHAVANTAGE_API_KEY="F61VH580D4BTM5SJ" python -m app.stocks
 ```
+
 
 ## Testing
 
