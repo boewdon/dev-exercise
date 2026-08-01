@@ -22,7 +22,7 @@ def fetch_stocks_csv(symbol="NFLX"):
 
     Return a pandas DataFrame with the time series data.
     """
-    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}&datatype=csv"
+    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}&datatype=csv"
     stocks_df = read_csv(request_url)
     return stocks_df
 
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
     # CHART THE DATA
 
-    fig = px.line(stocks_df, x="timestamp", y="adjusted_close",
+    fig = px.line(stocks_df, x="timestamp", y="close",
                 title=f"Stock Prices ({symbol})",
                 height=450
                 )
