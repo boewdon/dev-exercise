@@ -20,3 +20,5 @@ def test_data_fetching():
     assert "close" in stocks_df.columns
 
     assert len(stocks_df) >= 100
+
+
