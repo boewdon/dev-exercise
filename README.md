@@ -87,6 +87,7 @@ export FLASK_APP=web_app
 flask run
 ```
 
+Whenever we update the app we need to STOP the current server by using 'CTRL+C' in the command line and then use 'flask run' in the command line again 
 
 ## Testing
 
